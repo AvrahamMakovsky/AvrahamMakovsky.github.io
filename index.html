@@ -11,21 +11,19 @@
 
   <meta
     name="description"
-    content="Avraham Makovsky - IT infrastructure, validation lab support, systems support, practical automation, and public CV snapshot."
+    content="Avraham Makovsky - IT infrastructure, validation lab support, systems support, and practical automation."
   >
 
   <style>
     :root {
-      --dark: #050b16;
       --text: #172033;
       --muted: #5f6b7a;
       --bg: #f5f8fb;
       --surface: #ffffff;
       --border: #d7e0ea;
-      --cyan: #10bfe8;
+      --cyan: #61e9ff;
       --blue: #1f5eff;
       --soft-blue: #eef7ff;
-      --soft-cyan: #eafcff;
       --shadow: 0 16px 40px rgba(18, 32, 54, 0.08);
     }
 
@@ -60,20 +58,20 @@
     }
 
     .hero {
-      min-height: 540px;
+      min-height: 520px;
       color: #ffffff;
       background-image:
-        linear-gradient(90deg, rgba(5, 11, 22, 0.14), rgba(5, 11, 22, 0.86)),
+        linear-gradient(90deg, rgba(5, 11, 22, 0.12), rgba(5, 11, 22, 0.86)),
         url("background.jpeg");
       background-size: cover;
       background-position: center;
-      border-bottom: 1px solid rgba(16, 191, 232, 0.26);
+      border-bottom: 1px solid rgba(97, 233, 255, 0.28);
     }
 
     .hero-overlay {
-      min-height: 540px;
+      min-height: 520px;
       background:
-        linear-gradient(180deg, rgba(5, 11, 22, 0.02), rgba(5, 11, 22, 0.86));
+        linear-gradient(180deg, rgba(5, 11, 22, 0.02), rgba(5, 11, 22, 0.84));
     }
 
     .topbar,
@@ -101,7 +99,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 18px;
-      color: #c6d8e9;
+      color: #d8e8f5;
       font-size: 0.95rem;
     }
 
@@ -110,12 +108,12 @@
     }
 
     .hero-content {
-      padding: 88px 0 64px;
+      padding: 86px 0 62px;
     }
 
     .eyebrow {
       margin: 0 0 14px;
-      color: #61e9ff;
+      color: var(--cyan);
       font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.12em;
@@ -139,14 +137,16 @@
 
     .subtitle {
       margin-bottom: 12px;
-      font-size: clamp(1.12rem, 2vw, 1.4rem);
-      font-weight: 700;
+      color: #ffffff;
+      font-size: clamp(1.14rem, 2vw, 1.45rem);
+      font-weight: 800;
+      text-shadow: 0 0 18px rgba(97, 233, 255, 0.22);
     }
 
     .summary {
       max-width: 720px;
       margin-bottom: 28px;
-      color: #d1e0ee;
+      color: #d7e6f2;
       font-size: 1.06rem;
     }
 
@@ -170,7 +170,7 @@
     }
 
     .icon-links a:hover {
-      border-color: #61e9ff;
+      border-color: var(--cyan);
       background: rgba(16, 191, 232, 0.12);
     }
 
@@ -179,7 +179,7 @@
       height: 24px;
       display: inline-grid;
       place-items: center;
-      color: #61e9ff;
+      color: var(--cyan);
       background: rgba(97, 233, 255, 0.12);
       border: 1px solid rgba(97, 233, 255, 0.22);
       border-radius: 50%;
@@ -201,12 +201,12 @@
     }
 
     .content {
-      padding: 42px 0 36px;
+      padding: 40px 0 36px;
     }
 
     .section {
-      padding: 28px;
-      margin-bottom: 18px;
+      padding: 26px;
+      margin-bottom: 16px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 18px;
@@ -217,7 +217,7 @@
       display: flex;
       align-items: baseline;
       gap: 12px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .section-number {
@@ -229,13 +229,13 @@
 
     h2 {
       margin-bottom: 0;
-      font-size: 1.35rem;
+      font-size: 1.32rem;
       letter-spacing: -0.03em;
     }
 
     h3 {
       margin-bottom: 5px;
-      font-size: 1.02rem;
+      font-size: 1rem;
     }
 
     p {
@@ -246,21 +246,21 @@
       margin-bottom: 0;
     }
 
-    .snapshot {
-      background:
-        linear-gradient(135deg, #ffffff 0%, var(--soft-cyan) 100%);
-      border-color: #c6ecf6;
-    }
-
-    .snapshot-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+    .profile-note {
       margin-top: 14px;
+      padding: 13px 15px;
+      background: #eef7ff;
+      border: 1px solid #d9edf8;
+      border-radius: 14px;
+      color: var(--text);
     }
 
-    .snapshot-box,
-    .focus-grid article,
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
     .skill-group {
       padding: 16px;
       background: var(--soft-blue);
@@ -268,47 +268,14 @@
       border-radius: 14px;
     }
 
-    .snapshot-box p,
-    .focus-grid p {
-      margin-bottom: 0;
-      font-size: 0.96rem;
-    }
-
-    .snapshot-box ul,
     .skill-group ul {
       margin: 0;
       padding-left: 20px;
       color: var(--muted);
     }
 
-    .snapshot-box li,
     .skill-group li {
       margin: 3px 0;
-    }
-
-    .request-note {
-      margin-top: 16px;
-      padding: 14px 16px;
-      background: #ffffff;
-      border: 1px dashed #a9d9e8;
-      border-radius: 14px;
-      color: var(--text);
-    }
-
-    .request-note strong {
-      color: var(--text);
-    }
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
     }
 
     .project-list {
@@ -368,9 +335,7 @@
         padding-top: 72px;
       }
 
-      .focus-grid,
-      .skills-grid,
-      .snapshot-grid {
+      .skills-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -384,7 +349,7 @@
 
       .hero,
       .hero-overlay {
-        min-height: 620px;
+        min-height: 610px;
       }
 
       .section {
@@ -413,7 +378,7 @@
           </a>
 
           <nav class="nav-links" aria-label="Page navigation">
-            <a href="#snapshot">CV Snapshot</a>
+            <a href="#profile">Profile</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
           </nav>
@@ -488,96 +453,28 @@
     </section>
 
     <div class="content">
-      <section id="snapshot" class="section snapshot">
+      <section id="profile" class="section">
         <div class="section-head">
           <span class="section-number">01</span>
-          <h2>CV Snapshot</h2>
+          <h2>Profile</h2>
         </div>
 
         <p>
-          Public profile summary for quick review. Full CV is available on request.
+          I support hands-on infrastructure environments and build small tools
+          that make support work easier to repeat. My focus is practical:
+          troubleshooting, visibility, maintenance, user communication,
+          and reducing manual work.
         </p>
 
-        <div class="snapshot-grid">
-          <article class="snapshot-box">
-            <h3>Professional direction</h3>
-            <p>
-              IT infrastructure, systems support, validation lab operations,
-              and practical automation for support workflows.
-            </p>
-          </article>
-
-          <article class="snapshot-box">
-            <h3>Core experience</h3>
-            <p>
-              Hands-on work with remote hosts, Windows/Linux environments,
-              lab stations, maintenance flows, user communication, and tooling.
-            </p>
-          </article>
-
-          <article class="snapshot-box">
-            <h3>Strengths</h3>
-            <ul>
-              <li>Infrastructure troubleshooting</li>
-              <li>Support workflow improvement</li>
-              <li>Practical scripting and automation</li>
-              <li>Readable documentation and user-facing communication</li>
-            </ul>
-          </article>
-
-          <article class="snapshot-box">
-            <h3>Public materials</h3>
-            <ul>
-              <li>GitHub: smallscripts repository</li>
-              <li>LinkedIn professional profile</li>
-              <li>Full CV available after direct contact</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="request-note">
-          <strong>Full CV available on request.</strong>
-          The public page intentionally avoids exposing detailed employment history
-          and personal contact details.
+        <p class="profile-note">
+          Full CV available on request. The public page intentionally keeps
+          detailed employment history and personal contact details private.
         </p>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <span class="section-number">02</span>
-          <h2>Focus areas</h2>
-        </div>
-
-        <div class="focus-grid">
-          <article>
-            <h3>Systems support</h3>
-            <p>
-              Windows and Linux environments, remote hosts, diagnostics,
-              maintenance, and troubleshooting.
-            </p>
-          </article>
-
-          <article>
-            <h3>Validation lab infrastructure</h3>
-            <p>
-              Lab stations, deployment tasks, rebuilds, remote access,
-              visibility, and operational continuity.
-            </p>
-          </article>
-
-          <article>
-            <h3>Practical automation</h3>
-            <p>
-              Scripts and lightweight tools for repetitive workflows,
-              inventory checks, notifications, and task processing.
-            </p>
-          </article>
-        </div>
       </section>
 
       <section id="skills" class="section">
         <div class="section-head">
-          <span class="section-number">03</span>
+          <span class="section-number">02</span>
           <h2>Skills</h2>
         </div>
 
@@ -626,7 +523,7 @@
 
       <section id="projects" class="section">
         <div class="section-head">
-          <span class="section-number">04</span>
+          <span class="section-number">03</span>
           <h2>Selected public work</h2>
         </div>
 
@@ -671,4 +568,4 @@
     </div>
   </main>
 </body>
-                                   </html>
+  </html>
