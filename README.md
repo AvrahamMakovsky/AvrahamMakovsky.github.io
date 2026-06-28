@@ -1,9 +1,6 @@
 # Avraham Makovsky — GitHub Pages Website
 
-Safe public landing page for portfolio, CV snapshot, and profile links.
-
-This version intentionally does **not** link to a public CV PDF and does
-not expose a direct phone number or call link.
+Safe public landing page for profile, skills, public work, and CV request.
 
 ## Repository root
 
@@ -13,7 +10,7 @@ background.jpeg
 README.md
 ```
 
-Recommended: do **not** store a full CV PDF in this public repository.
+Do not store a full CV PDF in this public repository.
 
 ## Public links
 
