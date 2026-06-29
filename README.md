@@ -14,9 +14,9 @@ Do not store a full CV PDF in this public repository.
 
 ## Public links
 
-- Email: avi.makovsky@gmail.com
 - LinkedIn: https://linkedin.com/in/avrahammakovsky
 - GitHub: https://github.com/avrahammakovsky/smallscripts
+- Request CV: email-based action from the website
 
 ## Privacy approach
 
